@@ -7,7 +7,7 @@ set :port, '4567'
 
 get '/' do
 
-	response['X-Real-Host'] = `hostname`
- erb "<div class=\"text\">Server Name <%= request.env[\"SERVER_NAME\"]  %></div>\n<div class=\"text\"> Real Host<%= request[\"X-Real-Host\"]  %></div><div class=\"text\"> Request Environment<%= request.env  %></div>"
+	hostname = `hostname`
+ erb "<div class=\"text\">Server Name <%= request.env[\"SERVER_NAME\"]  %></div>\n<div class=\"text\"> Real Host<%= hostname  %></div><div class=\"text\"> Request Environment<%= request.env  %></div>"
 
 end
