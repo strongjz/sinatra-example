@@ -7,6 +7,6 @@ set :port, '4567'
 
 get '/' do
 
- erb "<div class=\"alert alert-message\"><%= request.env[\"SERVER_NAME\"]  %></div>"
+ erb "<div class=\"alert alert-message\"><%= request.env[\"SERVER_NAME\"]  %></div><div class=\"alert alert-message\"><%= request.env[\"SERVER_ADDR\"]  %></div>"
 
 end
